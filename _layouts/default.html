@@ -28,23 +28,21 @@
 
 {{ content }}
 
-<footer role="contentinfo">
-  <a id="site-logo" href="{{ site.url }}/">
-    <img src="{{ site.url }}/images/makerspace-icon.png">
-    <h1>{{site.title}}</h1>
-  </a>
-</footer>
-
 <!-- Required JS files. -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="{{ site.url }}/javascripts/deck/deck.core.js"></script>
+<script src="{{ site.url }}/javascripts/deck/extensions/scale/deck.scale.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
 $(function() {
-$('.slide').wrapInner('<div class="wrap">');
 $.deck('.slide');
-
+enableScale = $.deck('enableScale');
+$(document).bind('deck.change', function(event, from, to) {
+   var currentSlide = $.deck('getSlide', to);
+   var slideId = currentSlide.attr('id');
+    $('body').attr('class', slideId);
+});
 });
 </script>
 </body>
