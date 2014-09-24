@@ -9,9 +9,9 @@
 <meta name="robots" content="index,follow">
 
 <!-- Style Sheets -->
-<link href="{{site.url}}stylesheets/style.css" rel="stylesheet" />
+<link href="{{site.url}}/stylesheets/style.css" rel="stylesheet" />
 {% if page.css %}
-<link href="{{ page.custom }}" rel="stylesheet">
+<link href="{{site.url}}/stylesheets/{{ page.custom }}" rel="stylesheet">
 {% endif %}
 
 <!-- JavaScripts -->
@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="presentation {{ page.bodyclass }}">
+<body class="{{ page.bodyclass }}">
 
 <header role="banner" id="banner" class="slide">
     <h1>{{page.title}}</h1>
