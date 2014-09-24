@@ -1,0 +1,31 @@
+@function color-wheel($base-color, $color-rule, $color-direction: 'positive') {
+
+  $degrees: 0;
+
+  @if $color-rule == 'analogous' {
+    $degrees: 30;
+  } @else if $color-rule == 'split-complementary' {
+    $degrees: 150;
+  } @else if $color-rule == 'triad' {
+    $degrees: 120;
+  } @else if $color-rule == 'right-triangle' {
+    $degrees: 90;
+  } @else {
+    $degrees: $color-rule;
+  }
+
+  @if $color-direction == 'negative' {
+    $degrees: -$degrees;
+  }
+
+  $color: $base-color;
+  @if $color-rule == 'complementary' {
+    $color: complement($base-color);
+  } @else {
+    $color: adjust-hue($base-color, $degrees);
+  }
+
+  @return $color;
+}
+
+

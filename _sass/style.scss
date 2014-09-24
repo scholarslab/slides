@@ -1,0 +1,188 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,p,ul,ol {
+    margin-top:0;
+}
+
+h1,h2,h3 {
+    text-align:center;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #710;
+    background-image: -moz-linear-gradient(left center, rgba(119, 17, 0, .9), rgba(119, 17, 0, .9)), url('//scholarslab.org/wp-content/themes/labnotes/images/background.jpg');
+    background-image: -webkit-linear-gradient(left center, rgba(119, 17, 0, .9), rgba(119, 17, 0, .9)), url('//scholarslab.org/wp-content/themes/labnotes/images/background.jpg');
+    background-image: linear-gradient(to bottom, rgba(119, 17, 0, .9), rgba(119, 17, 0, .9)), url('//scholarslab.org/wp-content/themes/labnotes/images/background.jpg');
+    font-size: 165%;
+    position: relative;
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: auto;
+    font-weight:200;
+}
+
+.skip {
+     border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+a, a:link {
+    color:white;
+}
+
+img,video {
+    width: auto;
+    height:auto;
+    max-width:100%;
+}
+
+li ul,
+li ol {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.js .deck-container {
+    visibility: hidden;
+}
+.ready .deck-container {
+    visibility: visible;
+}
+.touch .deck-container {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+}
+
+.deck-loading {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-attachment:fixed;
+    overflow:hidden;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align:center;
+    height:100%;
+
+}
+
+.slide div {
+    width: 70%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#welcome {
+}
+
+#welcome svg {
+    fill: white;
+    text-align:center;
+}
+
+.slide p,
+.slide ul {
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align:left;
+}
+
+.slide li ul,
+.slide li ol {
+    margin-top:0;
+}
+
+#geospatial-services {
+background-image: -moz-linear-gradient(left center , rgba(30, 118, 118, 0.8), rgba(30, 118, 118, 0.8)), url('//teaching.scholarslab.org/img/map-charlottesville.jpg');
+background-image: -webkit-linear-gradient(left center, rgba(30, 118, 118, 0.8), rgba(30, 118, 118, 0.8)), url('//teaching.scholarslab.org/img/map-charlottesville.jpg');
+background-image: linear-gradient(to bottom, rgba(30, 118, 118, 0.8), rgba(30, 118, 118, 0.8)), url('//teaching.scholarslab.org/img/map-charlottesville.jpg');
+
+}
+
+#makerspace {
+    background-image: -moz-linear-gradient(left center , rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2014/09/makerspace7.jpg');
+    background-image: -webkit-linear-gradient(left center , rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2014/09/makerspace7.jpg');
+    background-image: linear-gradient(to bottom , rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2014/09/makerspace7.jpg');
+
+}
+
+#graduate-fellowships {
+        background-image: -moz-linear-gradient(left center , rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2012/10/fellows.jpg');
+        background-image: -webkit-linear-gradient(left center , rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2012/10/fellows.jpg');
+        background-image: linear-gradient(to bottom, rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url('http://scholarslab.org/wp-content/uploads/2012/10/fellows.jpg');
+}
+
+
+.deck-before, .deck-previous, .deck-next, .deck-after {
+    position: absolute;
+    left: -999em;
+    top: -999em;
+}
+
+.deck-current {
+    z-index: 2;
+}
+
+.slide .slide {
+    visibility: hidden;
+    position: static;
+    min-height: 0;
+}
+
+/*.slide .wrap {*/
+    /*background: #fff;*/
+    /*min-height: 100%;*/
+    /*width: 100%;*/
+    /*padding: 10%;*/
+/*}*/
+
+.deck-child-current {
+    position: static;
+    z-index: 2;
+}
+.deck-child-current .slide {
+    visibility: hidden;
+}
+.deck-child-current .deck-previous, .deck-child-current .deck-before, .deck-child-current .deck-current {
+    visibility: visible;
+}
+

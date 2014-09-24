@@ -1,0 +1,289 @@
+---
+layout: default
+title: Introduction to 3D Modeling and Printing
+author:
+  - Jeremy Boggs
+description: "Slides for a presentation outlining tools, techniques, and terminology associated with making three-dimensional digital models and working with desktop fabrication tools."
+---
+
+<section class="slide" id="welcome">
+    <h1>Introduction to 3D Modeling and Printing</h1>
+    <p>A <a href="http://scholarslab.org">Scholars’ Lab</a> Makerspace workshop by Jeremy Boggs</p>
+</section>
+
+<section class="slide">
+    <h1>We welcome the 10,000 every day</h1>
+    <a href="http://xkcd.com/1053/"><span class="skip">XKCD comic: Ten Thousand</span> <img src="http://imgs.xkcd.com/comics/ten_thousand.png" alt=""></a>
+    <p>Read more about our working ethos in the <a href="http://scholarslab.org/about/charter">Scholars' Lab Charter</a>.</p>
+</section>
+
+<section class="slide">
+    <h1>Workshop Goals</h1>
+    <ul>
+        <li>Get participants acquainted with the tools, techniques, and terminology associated with 3D modeling and printing.</li>
+        <li>Help you get comfortable enough to visit our Makerspace and try to make something!</li>
+    </ul>
+</section>
+
+<section class="slide">
+  <h1>What is 3D Printing?</h1>
+  <p><strong>3D Printing</strong> tools and methods (additive and subtractive) for generating physical objects from digital models.</p>
+</section>
+
+<section class="slide">
+  <h1>Types of 3D Printing</h1>
+  <p><strong>Additive 3D Printing</strong> involves putting down layers of material (e.g. plastic filament) and building an object up.</p>
+  <p><strong>Subtractive 3D Printing</strong> involves taking a solid piece of material (e.g. wood or acrylic) and cutting away pieces until the desired object is left.</p>
+</section>
+
+<section class="slide">
+    <video>
+        <source src="https://dl.dropboxusercontent.com/u/21533066/trex_timelapse.mp4">
+    </video>
+</section>
+
+<section class="slide">
+    <h1>Why Might I want to use 3D printing?</h1>
+    <ul>
+        <li>Replacement parts (Our printer has a replacement part we printed.)</li>
+        <li>Prototyping ideas (architectural concepts, models)</li>
+        <li>Make toys or statues.</li>
+        <li>Print 3D scans of objects you like in a museum.</li>
+        <li>Fun</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>How have others used 3D printing?</h1>
+    <ul>
+        <li>Printing parts for <a href="http://www.stratasys.com/industries/aerospace">airplanes and aerospace projects</a></li>
+        <li><a href="http://creativemachines.cornell.edu/cuneiform">Create and print cuneform tablets</a></li>
+        <li>Fix or <a href="http://nautarch.tamu.edu/WilderLab/3dprinting.shtml">recreate historical objects</a> for sharing in classroom (without harming the original)</li>
+        <li>Create <a href="http://www.npr.org/2014/03/13/289836980/with-3-d-printing-affordable-prosthetics-are-in-reach">affordable prosthetics for children</a> and <a href="http://www.npr.org/blogs/health/2014/03/17/289042381/doctors-use-3-d-printing-to-help-a-baby-breathe">other medical uses</a></li>
+        <li>Create/recreate <a href="http://www.makerbot.com/blog/2012/10/20/cosmo-wenmans-mind-blowing-sculpture-made-on-a-makerbot/">art</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Printed cuneform tablets</h2>
+    <a href="http://creativemachines.cornell.edu/cuneiform"><img src="images/cuneform-tablets.jpg" alt=""></a>
+</section>
+
+<section class="slide">
+    <h2>Casts</h2>
+    <a href="http://www.wired.com/2013/07/is-this-cast-the-future-of-healing-broken-bones/"><img src="images/cast.jpg" alt=""></a>
+</section>
+
+<section class="slide">
+    <h2>Horse head of Selene</h2>
+    <a href="http://www.makerbot.com/blog/2012/10/20/cosmo-wenmans-mind-blowing-sculpture-made-on-a-makerbot/"><img src="images/horse-head.png" alt=""></a>
+</section>
+
+<section class="slide">
+    <h1>Additive Printers</h1>
+    <p>The printer we have is an additive printer, a <a href="http://store.makerbot.com/replicator2">Makerbot Replicator 2</a>. There are lots of other printers:</p>
+    <ul>
+        <li><a href="http://makerbot.com">Makerbot</a></li>
+        <li><a href="http://reprap.org/wiki/RepRap">RepRap</a></li>
+        <li><a href="http://cubify.com/">Cubify</a></li>
+        <li><a href="http://www.makergear.com/">Makergear</a></li>
+        <li><a href="http://printrbot.com/">Printrbot</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Additive Printers: Common Printer filaments</h1>
+    <ul>
+        <li><abbr>PLA</abbr> (Polylactic Acid) plastic - made from plant resources including sugars and starches, is biodegradable, less prone to warping when printing. Should <b>not</b> be used on a heated build platform.</li>
+        <li><abbr>ABS</abbr> (Acrylonitrile Butadiene Styrene) plastic - made from oils. Much sturdier than PLA, but requires higher temperatures to print. <b>Requires a heated build platform</b>. (LEGO bricks are made from ABS.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>The Process</h1>
+    <ul>
+        <li><a href="http://thingiverse.com">Find or create an object</a>, and open that object into a 3D printer application, like <a href="https://www.makerbot.com/desktop/">Makerbot Desktop</a></li>
+        <li>Change settings (size, layer height, infill, speed of print) as desired</li>
+        <li>Export the model to a SD card, load into the printer, and start the print!</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Find an Object on Thingiverse.com</h1>
+    <p>Visit <a href="http://thingiverse.com">Thingiverse</a> and find an object you'd like to print.</p>
+</section>
+
+<section class="slide">
+    <h1>Download and Install Makerbot Desktop</h1>
+    <p>Visit <a href="http://makerbot.com/desktop">Makerbot Desktop</a> and download and install the version appropriate for your computer. (We also have this installed on the Makerspace computer!)</p>
+</section>
+
+<section class="slide">
+    <img src="images/makerbot-desktop-interface.png" alt="">
+</section>
+
+<section class="slide">
+    <h1>Makerbot Desktop Interface: Summary</h1>
+    <ul>
+        <li>In the main menu, choose <code>Devices > Type of Device</code> and ensure you have the correct printer model selected. This ensures the interface loads the correct <strong>build space</strong> for your printer</li>
+        <li>Once you have an object loaded, you can view, move, rotate, or scale the object as desired. Be sure not to move or scale the object beyond your printer's build space!</li>
+        <li>When you've altered your model as desired, you can export the print file and save it to a SD card.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <img src="images/makerbot-desktop-make.png" alt="" width="500px">
+</section>
+
+<section class="slide">
+    <h1>Makerbot Desktop Interface: Make a Print</h1>
+    <ul>
+        <li>Resolution (presets) — How fine your print layers are. Lower resolution means faster print, but lower quality.</li>
+        <li>Raft - Lays down a small grid of filament to help the print stick to the build platform.</li>
+        <li>Supports — Scaffolding if your model has significant areas of overhang.</li>
+        <li>Infill — How solid to make the print.</li>
+        <li>Shells — Layers for outside wall of print. More shells = more sturdy</li>
+        <li>Layer Height — How thick each layer of print will be. Lower = finer, but longer print</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Export Print File</h1>
+    <p>Once you're ready to print, select "Export Print File" to generate a file for the printer.</p>
+    <img src="images/makerbot-desktop-export.png" width="500px">
+</section>
+
+<section class="slide">
+    <h1>Troubleshooting</h1>
+    <img src="http://scholarslab.org/wp-content/uploads/2012/10/IMG_3169.jpg">
+</section>
+
+<section class="slide">
+    <h1>Print Failure</h1>
+    <p>If a print fails, it's usually because of one or both of these reasons:</p>
+    <ul>
+        <li>The printer isn't set up correctly</li>
+        <li>There's something wrong with the model</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Calibrating: Printer Scripts</h1>
+    <p>The Replicator 2 has several scripts to help you calibrate and alter your printer set-up, including:</p>
+    <ul>
+        <li>Loading and unloading filament</li>
+        <li>Leveling the build platform</li>
+        <li>Jog mode (to manually move the platform around)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Calibration: Preparing the build platform</h1>
+    <ul>
+        <li>Run the leveling script to ensure the printer nozzle and the platform are the same distance apart at all points of movement.</li>
+        <li>Use a small piece of paper, or a <a href="http://en.wikipedia.org/wiki/Feeler_gauge">feeler gauge</a> (0.1mm leaf) to test this distance. Turn knobs below the platform to adjust platform height accordingly.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>During a print</h1>
+    <ul>
+        <li>Watch for a few minutes to ensure plastic is being laid down consistently and reliably</li>
+        <li>If the print isn't working well and you want to stop it, press the left arrow on the printer panel, and choose "Cancel Build"</li>
+        <li>If the print is going fine, and you just want to stop it momentarily, press the left arrow on the printer panel, and choose "Pause".</li>
+        <li>If the print is going fine, but you need to stop it for a longer period of time (e.g. overnight), press the left arrow, and choose "Cold Pause". This will cool down the nozzle, but allow you to Resume the print later</li>
+    </ul>
+</section>
+
+<section class="slide title">
+    <h1>3D Modeling with Photogrammetry</h1>
+</section>
+
+<section class="slide">
+  <h1>What is Photogrammetry?</h1>
+  <p><strong>Photogrammetry</strong> involves tools and techniques that allow you to create 3-dimensional objects and spaces using 2-dimensional data and source material.</p>
+</section>
+
+<section class="slide">
+  <h1>Why Use Photogrammetry?</h1>
+  <p>Photogrammetry just requires a camera. Much more portable and accessible. Like desktop 3D printers, useful for rapid prototyping.</p>
+</section>
+
+<section class="slide">
+  <h1>The Process</h1>
+  <ul>
+    <li>Select an object. If possible, set it up in a way conducive for photogrammetry</li>
+    <li>Take a bunch of pictures of the object, from a variety of angles.<./li>
+    <li>Upload photos to <a href="http://123dapp.com">123 Catch online application</a> to generate model.</li>
+    <li>Download model and clean up in 123D Catch or <a href="http://www.meshmixer.com/">MeshMixer</a> for viable 3D printing.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Shooting Tips</h1>
+  <ul>
+    <li>Avoid shiny surfaces and lots of contrast</li>
+    <li>You move around, not the object. Don't move the object.</li>
+    <li>The object should fill the frame.</li>
+    <li>Set the object in a place where you can move around it, and with plenty of other things going on in the background.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Shooting Tips</h1>
+  <ul>
+    <li>Keep settings on the camera the same for all shots, including:
+      <ul>
+        <li>ISO</li>
+        <li>Shutter Speed</li>
+        <li>Aperture (f-stop)</li>
+        <li>Focus</li>
+        <li>White balance</li>
+      </ul>
+    </li>
+    <li>Use a lower ISO setting if possible</li>
+    <li>Use a higher aperture setting if possible</li>
+    <li>Disable flash; set your object in diffused light as much as possible.</li>
+</section>
+
+<section class="slide">
+  <h1>Shooting Tips</h1>
+  <p>Take at least 60 photographs:</p>
+      <ul>
+        <li>One set at eye-level, with you moving in a circle around the object and stopping every 15-20 degrees to take a shot.(~20 total pics)</li>
+        <li>Using the same process, point the camera down at the object at about a 45-degree angle.</li>
+        <li>Take a shot straight down on the object</li>
+        <li>Use remaining shots to take shots that get more detail. Move closer in to the object (don't zoom!)</li>
+      </ul>
+</section>
+
+<section class="slide">
+    <h1>Shooting Sequence</h1>
+  <img alt="" src="images/eric-imagecapture.gif">
+</section>
+<section class="slide">
+  <h1>Look at your Pictures</h1>
+</section>
+
+<section class="slide">
+  <h1>Make Your Model</h1>
+  <p>Sign up for a free account at <a href="http://www.123dapp.com/">123D App</a>.</p>
+  <img src="images/catch-home.png">
+</section>
+
+<section class="slide">
+  <h1>Further Reading</h1>
+  <ul>
+    <li><a href="http://www.123dapp.com/howto">123D HowTo</a></li>
+    <li><a href="http://curriculum.makerbot.com/2012/capturing_images.html#">Meshmixer Clean Up and Capping</a></li>
+  </ul>
+</section>
+
+<section class="slide background-full" id="makerspace">
+    <h1>Thanks!</h1>
+    <ul>
+        <li>Contact Scholars' Lab:<a href="mailto:scholarslab@virginia.edu?subject=Makerspace">scholarslab@virginia.edu</a>, <a href="http://twitter.com/scholarslab">@scholarslab on Twitter</a>, <a href="http://scholarslab.org">scholarslab.org</a></li>
+        <li>Contact Jeremy: <a href="mailto:jeremy@virginia.edu?subject=Makerspace">jeremy@virginia.edu</a>, <a href="http://twitter.com/clioweb">@clioweb on Twitter</a></li>
+    </ul>
+    <img src="http://static.scholarslab.org/images/logos/slab/slab-logo-white-125px.png" alt="Scholars Lab Logo">
+</section>
