@@ -1,33 +1,7 @@
 ---
 layout: default
-css: presentation.css
+bodyclass: presentation
 ---
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
-<meta name="robots" content="index,follow">
-
-<!-- Style Sheets -->
-<link href="{{site.url}}/stylesheets/style.css" rel="stylesheet" />
-{% if page.theme %}
-<link href="{{site.url}}/stylesheets/themes/{{page.theme}}.css" rel="stylesheet">
-{% endif %}
-{% if page.custom %}
-<link href="{{ page.custom }}" rel="stylesheet">
-{% endif %}
-
-<!-- JavaScripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-
-</head>
-
-<body class="presentation {{ page.bodyclass }}">
 
 <header role="banner" id="banner" class="slide">
     <h1>{{page.title}}</h1>
@@ -36,24 +10,3 @@ css: presentation.css
 
 {{ content }}
 
-<footer role="contentinfo">
-  <a id="site-logo" href="{{ site.url }}/">
-    <img src="{{ site.url }}/images/makerspace-icon.png">
-    <h1>{{site.title}}</h1>
-  </a>
-</footer>
-
-<!-- Required JS files. -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="{{ site.url }}/javascripts/deck/deck.core.js"></script>
-
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-<script>
-$(function() {
-$('.slide').wrapInner('<div class="wrap">');
-$.deck('.slide');
-
-});
-</script>
-</body>
-</html>

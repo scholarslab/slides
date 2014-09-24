@@ -9,11 +9,8 @@
 <meta name="robots" content="index,follow">
 
 <!-- Style Sheets -->
-<link href="{{site.url}}/stylesheets/style.css" rel="stylesheet" />
-{% if page.theme %}
-<link href="{{site.url}}/stylesheets/themes/{{page.theme}}.css" rel="stylesheet">
-{% endif %}
-{% if page.custom %}
+<link href="{{site.url}}stylesheets/style.css" rel="stylesheet" />
+{% if page.css %}
 <link href="{{ page.custom }}" rel="stylesheet">
 {% endif %}
 
