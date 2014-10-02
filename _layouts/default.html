@@ -21,23 +21,33 @@
 
 <body class="{{ page.bodyclass }}">
 
-<header role="banner" id="banner" class="slide">
-    <h1>{{page.title}}</h1>
-    <p class="byline">A <a href="http://scholarslab.org">Scholars' Lab</a> workshop by {{ page.author }}</p>
-</header>
-
 {{ content }}
 
 <!-- Required JS files. -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="{{ site.url }}/javascripts/deck/deck.core.js"></script>
 <script src="{{ site.url }}/javascripts/deck/extensions/scale/deck.scale.js"></script>
+{% if page.auto %}
+<script src="{{ site.url }}/javascripts/deck/extensions/automatic/deck.automatic.js"></script>
+{% endif %}
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
 $(function() {
+
+{% if page.auto %}
+$.extend(true, $.deck.defaults, {
+  automatic: {
+    startRunning: true,    // true or false
+    cycle: true,           // true or false
+    slideDuration: 20000 // duration in milliseconds
+  }
+});
+
+{% endif %}
+
 $.deck('.slide');
-enableScale = $.deck('enableScale');
+
 $(document).bind('deck.change', function(event, from, to) {
    var currentSlide = $.deck('getSlide', to);
    var slideId = currentSlide.attr('id');
