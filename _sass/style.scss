@@ -10,7 +10,7 @@ body {
     -moz-background-size: cover;
     -webkit-background-size: cover;
 
-    background-size: cover;
+    @include background-size(cover);
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
@@ -114,6 +114,7 @@ li ol {
     background-attachment:fixed;
     background-position: 50% 50%;
     background-repeat:no-repeat;
+    background-image:none;
     @include background-size(cover);
     height: 100vh;
     display: inline-block; /* non-flexbox browsers */
@@ -124,35 +125,34 @@ li ol {
     padding-right: 15%;
     padding-bottom: 60px;
     @include box-sizing(border-box);
+}
 
-    &.gis {
+.gis {
     @include background-image(
         linear-gradient(top, rgba(30, 118, 118, 0.8), rgba(30, 118, 118, 0.8)),
         url('/images/map-charlottesville.jpg')
     );
-    }
+}
 
-    &.graduate-fellowships {
-    @include background-image(
-        linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
-        url('/images/fellows.jpg')
-    );
-    }
+.graduate-fellowships {
+@include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    url('/images/fellows.jpg')
+);
+}
 
-    &.makerspace {
-    @include background-image(
-        linear-gradient(top, rgba(black, 0.8), rgba(black, 0.8)),
-        url('/images/makerspace.jpg')
-    );
-    }
+.makerspace {
+@include background-image(
+    linear-gradient(top, rgba(black, 0.8), rgba(black, 0.8)),
+    url('/images/makerspace.jpg')
+);
+}
 
-    &.arduino {
-    @include background-image(
-        linear-gradient(top, rgba(#710, 0.8), rgba(#710, 0.8)),
-        url('/images/arduino1.jpg')
-    );
-    }
-
+.arduino, .arduino .slide {
+@include background-image(
+    linear-gradient(top, rgba(#710, 0.8), rgba(#710, 0.8)),
+    url('/images/arduino1.jpg')
+);
 }
 
 #scholarslab-logo {
