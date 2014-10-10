@@ -134,6 +134,13 @@ li ol {
     );
 }
 
+.praxis-week {
+@include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+        url('/images/praxis-final.jpg')
+    );
+}
+
 .graduate-fellowships {
 @include background-image(
     linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
