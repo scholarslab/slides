@@ -136,7 +136,7 @@ li ol {
 
 .praxis-week {
 @include background-image(
-    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    linear-gradient(top, rgba(#024, 0.95), rgba(#024, 0.95)),
         url('/images/praxis-final.jpg')
     );
 }
@@ -147,6 +147,13 @@ li ol {
     url('/images/fellows.jpg')
 );
 }
+
+.senefeld-fellow {
+@include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    url('http://scholarslab.org/wp-content/uploads/2014/08/emily-senefeld.jpeg')
+);
+}  
 
 .makerspace {
 @include background-image(
