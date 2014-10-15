@@ -169,6 +169,15 @@ li ol {
 );
 }
 
+// Photo credit - https://flic.kr/p/73DotP
+.kari-krauss {
+@include background-image(
+    linear-gradient(top, rgba(#710, 0.8), rgba(#710, 0.8)),
+    url('/images/krauss-background.jpg')
+);
+
+}
+
 #scholarslab-logo {
     position:absolute;
     bottom: 30px;
