@@ -20,7 +20,6 @@ body {
         linear-gradient(top, rgba(119, 17, 0, .9), rgba(119, 17, 0, .9)),
         url('//scholarslab.org/wp-content/themes/labnotes/images/background.jpg')
     );
-    font-size: 125%;
     position: relative;
     min-height: 100%;
     margin: 0 auto;
@@ -111,6 +110,7 @@ li ol {
 .slide {
     width: 100%;
     position: relative;
+    font-size: 225%;
     background-attachment:fixed;
     background-position: 50% 50%;
     background-repeat:no-repeat;
@@ -161,7 +161,6 @@ li ol {
     url('http://scholarslab.org/wp-content/uploads/2014/10/Breadnut-Island-Pen.jpg')
 );
 }
-
 
 .makerspace {
 @include background-image(
@@ -226,4 +225,25 @@ li ol {
     visibility: visible;
 }
 
-@import 'deck.scale';
+.csstransforms .deck-container.deck-scale:not(.deck-menu) {
+  overflow:hidden;
+
+  > .slide {
+    -moz-box-sizing: padding-box;
+    box-sizing: padding-box;
+    width:100%;
+    padding-bottom:20px;
+
+    > .deck-slide-scaler {
+      -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+    }
+  }
+}
+
+.csstransforms .deck-container.deck-menu .deck-slide-scaler {
+  -webkit-transform:none !important;
+  -ms-transform:none !important;
+  transform:none !important;
+}
