@@ -153,7 +153,15 @@ li ol {
     linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
     url('http://scholarslab.org/wp-content/uploads/2014/08/emily-senefeld.jpeg')
 );
-}  
+}
+
+.foy-fellow {
+@include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    url('http://scholarslab.org/wp-content/uploads/2014/10/Breadnut-Island-Pen.jpg')
+);
+}
+
 
 .makerspace {
 @include background-image(
