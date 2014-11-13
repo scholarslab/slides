@@ -137,7 +137,7 @@ li ol {
 .praxis-week {
 @include background-image(
     linear-gradient(top, rgba(#024, 0.95), rgba(#024, 0.95)),
-        url('/images/praxis-final.jpg')
+        url('/images/praxis-design.jpg')
     );
 }
 
@@ -169,6 +169,22 @@ li ol {
     url('http://scholarslab.org/wp-content/uploads/2014/10/Breadnut-Island-Pen.jpg')
 );
 }
+
+.ambuske-fellow {
+  @include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    url('http://scholarslab.org/wp-content/uploads/2014/08/jim.jpg')
+    );
+
+}
+
+.kathleen-kennedy {
+  @include background-image(
+    linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+    url('/images/kennedy-talk.jpg')
+    );
+  }   
+
 
 .makerspace {
 @include background-image(
