@@ -206,7 +206,13 @@ li ol {
     linear-gradient(top, rgba(#710, 0.8), rgba(#710, 0.8)),
     url('/images/krauss-background.jpg')
 );
+}
 
+.jentery-sayers {
+@include background-image(
+    linear-gradient(top, rgba(#710, 0.8), rgba(#710, 0.8)),
+    url('/images/makerspace2ü,!2.jpg')
+);
 }
 
 #scholarslab-logo {
