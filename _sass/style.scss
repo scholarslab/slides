@@ -224,7 +224,7 @@ li ol {
 
 #neatline {
 	@include background-image(
-    	linear-gradient(top, rgba(#5d3967, 0.8), rgba(#5d3967, 0.8)),
+    	linear-gradient(top, rgba(#5d3967, 0.9), rgba(#5d3967, 0.9)),
     url('/images/neatline.jpg')
 );
 }
