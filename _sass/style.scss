@@ -183,7 +183,7 @@ li ol {
     linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
     url('/images/kennedy-talk.jpg')
     );
-  }   
+  }
 
 
 .makerspace {
@@ -214,6 +214,14 @@ li ol {
     url('/images/makerspace2ü,!2.jpg')
 );
 }
+
+#jefferson-notes {
+	@include background-image(
+    	linear-gradient(top, rgba(#000, 0.8), rgba(#000, 0.8)),
+    url('/images/jefferson-notes.jpg')
+);
+}
+
 
 #scholarslab-logo {
     position:absolute;
