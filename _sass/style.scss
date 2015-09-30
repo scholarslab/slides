@@ -229,6 +229,13 @@ li ol {
 );
 }
 
+#praxis-time {
+  @include background-image(
+        linear-gradient(top, rgba(#710, 0.9), rgba(#710, 0.9)),
+        url('/images/time-praxis.jpg')
+);
+}
+
 
 #scholarslab-logo {
     position:absolute;
