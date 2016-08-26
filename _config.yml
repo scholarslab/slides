@@ -1,7 +1,6 @@
 # standard jekyll configuration
 
 permalink: /:year/:month/:title/
-highlighter:  pygments
 exclude: ['readme.md', 'Rakefile', 'Procfile', 'config.rb', '.gitignore', '.sass-cache', 'Gemfile', 'Gemfile.lock']
 show_drafts: true
 
