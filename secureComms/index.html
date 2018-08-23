@@ -1,0 +1,174 @@
+---
+layout: workshop
+title: Practical Privacy: Introduction to Secure Communications
+author: Shane Lin
+bodyclass: computers
+---
+
+
+
+<section class="slide">
+    <h1>Cryptography</h1>
+    <p>"Secret writing" - coined by Edgar Allen Poe</p>
+	<p>Encryption, but increasingly technologies to allow authentication, anonymity, non-refutation, deniability</p>
+</section>
+
+<section class="slide">
+    <h1>Basic Terminology</h1>
+    <p>Cipher</p>
+	<p>Plaintext</p>
+	<p>Ciphertext</p>
+	<p>Key</p>
+</section>
+
+<section class="slide">
+    <h1>Alice and Bob</h1>
+    <p><img src="images/alice_and_bob.png"><span><a href="https://xkcd.com/177/">https://xkcd.com/177/</a></span></p>
+</section>
+
+<section class="slide">
+    <h1>Early methods</h1>
+    <p><img src="images/1024px-Skytale.png">
+    <span><a href="https://en.wikipedia.org/wiki/Scytale#/media/File:Skytale.png">https://en.wikipedia.org/wiki/Scytale#/media/File:Skytale.png</a></span></p>
+</section>
+
+<section class="slide">
+    <h1>Substitution ciphers</h1>
+    <p><a href="https://cryptii.com/caesar-cipher">Caesar Shift (demo)</a><p>
+	<p><a href="https://cryptii.com/vigenere-cipher">Vigenère Cipher (demo)</a><p>
+</section>
+
+<section class="slide">
+    <p><img src="images/article-1341666-0C942BB8000005DC-290_634x295.jpg">
+    <p>
+    <span>source: <a href="http://www.leftcoastrebel.com/2010/12/pictures-civil-war-vignere-cipher-code.html">AP</a></span></p>
+</section>
+
+<section class="slide">
+    <p><img src="images/Jefferson_disk_cipher.jpg">
+    <p>
+    <span>source: <a href="https://en.wikipedia.org/wiki/Jefferson_disk#/media/File:Jefferson%27s_disk_cipher.jpg">Wikipedia</a></span></p>
+</section>
+
+<section class="slide">
+    <h1>Book Ciphers</h1>
+    <p><img src="images/Beale_Papers.gif" alt="">
+	<img src="images/ciphers_0.jpg">
+    <p>
+    <span>source: <a href="https://en.wikipedia.org/wiki/File:Beale_Papers.gif">Wikipedia</a></span></p>
+</section>
+
+<section class="slide">
+    <h1>Modern cryptography</h1>
+    <p><img src="images/ClaudeShannon_MFO3807.jpg">
+    <span>source: <a href="https://en.wikipedia.org/wiki/Claude_Shannon#/media/File:ClaudeShannon_MFO3807.jpg">Wikipedia</a></span></p>
+</section>
+
+
+<section class="slide">
+    <h1>Symmetric Key Cryptography</h1>>
+    <p><img src="
+		images/ssldig01.gif">
+        <span>source: <a href="https://www.ibm.com/support/knowledgecenter/en/SSB23S_1.1.0.14/gtps7/s7symm.html">IBM</a></span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>But networks are complicated...</h1>
+    <p>
+        <span>Metcalfe's Law</span>
+        <img src="images/Metcalfe-Network-Effect.svg.png">
+        <span>source:
+            <a href="https://en.wikipedia.org/wiki/Metcalfe%27s_law#/media/File:Metcalfe-Network-Effect.svg">Wikipedia</a>
+        </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>Asymmetric Key / Public Key Cryptography</h1>
+    <p><img src="images/ssldig02.gif">
+    <span>source:
+        <a href="https://www.ibm.com/support/knowledgecenter/en/SSB23S_1.1.0.14/gtps7/s7symm.html">IBM</a>
+    </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>Diffie-Hellman-Merkle Key Exchange</h1>
+    <p>
+        <img src="images/427px-Diffie-Hellman_Key_Exchange.svg.png">
+        <span>source:
+            <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#/media/File:Diffie-Hellman_Key_Exchange.svg">Wikipedia</a>
+        </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>RSA</h1>
+        <p>
+            <span> Demo: <a href="https://sela.io/pgp/">https://sela.io/pgp/</a></span>
+            <img src="images/RSA.jpg">
+            <span>source:
+                <a href="https://iesc-s2.mit.edu/608/__STATIC__/spring18/lectures/lec6_608_2018_handout.pdf">MIT</a>
+            </span>
+        </p>
+</section>
+
+<section class="slide">
+    <h1>Digital Signatures</h1>
+    <p>
+        <img src="images/Private_key_signing.png">
+        <span>source:
+            <a href="https://en.wikipedia.org/wiki/Digital_signature#/media/File:Private_key_signing.png">Wikipedia</a>
+        </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>Certificates</h1>
+    <p>
+        <img src="images/1200px-PublicKeyCertificateDiagram_It.svg.png">
+        <span>source:
+            <a href="https://en.wikipedia.org/w/index.php?title=File:PublicKeyCertificateDiagram_It.svg&lang=en">Wikipedia</a>
+        </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>Certificate Authorities vs Web of Trust</h1>
+    <p>
+        <span>Mozilla Installed CAs:
+            <a href="https://ccadb-public.secure.force.com/mozilla/IncludedCACertificateReport">https://ccadb-public.secure.force.com/mozilla/IncludedCACertificateReport</a>
+        </span>
+        <img src="images/responsible_behavior.png">
+        <span>
+            <a href="https://xkcd.com/364/">xkcd</a>
+        </span>
+    </p>
+    <p>
+        <a href="https://keybase.io/shanelin/">Keybase</a>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>HTTPS (TLS)</h1>
+    <p>
+        <a href="https://ssltools.digicert.com/checker/views/checkInstallation.jsp">Cert checker</a>
+        <img src="images/SSLTLS_handshake.png">
+        <span>
+            <a href="https://www.ssl.com/article/ssl-tls-handshake-overview/">SSL.com</a>
+        </span>
+    </p>
+</section>
+
+<section class="slide">
+    <h1>Key Sizes, Revisited</h1>
+    <p>
+        <a href="https://www.schneier.com/blog/archives/2009/09/the_doghouse_cr.html">Schneier, Applied Cryptography:</a>
+        <span>
+            There's a limit to brute-forcing large key sizes that "have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow.
+            And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something
+            other than matter and occupy something other than space."
+        </span>
+    </p>
+</section>
