@@ -18,7 +18,7 @@ body {
 
     @include background-image(
         linear-gradient(top, rgba(119, 17, 0, .9), rgba(119, 17, 0, .9)),
-        url('//scholarslab.org/wp-content/themes/labnotes/images/background.jpg')
+        url('/images/background.jpg')
     );
     position: relative;
     min-height: 100%;
@@ -299,3 +299,25 @@ li ol {
   -ms-transform:none !important;
   transform:none !important;
 }
+
+.ghost {
+    @include background-image(
+        linear-gradient(top, rgba(30, 118, 118, 0.8), rgba(30, 118, 118, 0.8)),
+        url('/images/ghost-in-the-mp3.png')
+    );
+}
+
+.skriker {
+    @include background-image(
+        linear-gradient(top, rgba(#5d3967, 0.9), rgba(#5d3967, 0.9)),
+        url('/images/skriker.png')
+    );
+}
+
+.takeback {
+    @include background-image(
+        linear-gradient(top, rgba(black, 0.8), rgba(black, 0.8)),
+        url('/images/takeback-banner.png')
+    );
+}
+
