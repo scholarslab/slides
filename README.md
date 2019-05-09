@@ -47,11 +47,11 @@ You would want to change three pieces -
 
 4. Make sure the slide you want is included in index.html. You do this by adding an include statement like these - 
 
-'''
+```
 {% include slides/digital-skriker.html %}
 
 {% include slides/takeback.html %}
-'''
+```
 
 Though the filename would need to change to whatever the name of your new slide file is. To take a slide out, you can delete an include line.
 
