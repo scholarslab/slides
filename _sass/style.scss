@@ -321,3 +321,11 @@ li ol {
     );
 }
 
+.miller {
+    @include background-image(
+        linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+        url('/images/miller.jpg')
+    );
+}
+
+
