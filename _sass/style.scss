@@ -328,4 +328,13 @@ li ol {
     );
 }
 
+.buysse {
+    @include background-image(
+        linear-gradient(top, rgba(#024, 0.8), rgba(#024, 0.8)),
+        url('/images/buysse.png')
+    );
+}
 
+.buysse p{
+  background: rgba(#024, 0.8);
+}
