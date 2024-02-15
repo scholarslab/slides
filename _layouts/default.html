@@ -9,22 +9,22 @@
 <meta name="robots" content="index,follow">
 
 <!-- Style Sheets -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
-<link href="{{site.url}}/stylesheets/style.css" rel="stylesheet" />
+<link href="https://use.typekit.net/tca4szh.css" rel="stylesheet">
+<link href="{{site.url}}/stylesheets/style.css" rel="stylesheet">
 {% if page.css %}
 <link href="{{site.url}}/stylesheets/{{ page.custom }}" rel="stylesheet">
 {% endif %}
 
-<!-- JavaScripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-
 </head>
 
 <body class="{{ page.bodyclass }}">
-
+<header id="banner" role="banner">
+  <span><img src="https://scholarslab.lib.virginia.edu/assets/img/UVALIB_primary_white_web.png" alt=""></span>
+</header>
 {{ content }}
 
 <!-- Required JS files. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="{{ site.url }}/javascripts/deck/deck.core.js"></script>
 <script src="{{ site.url }}/javascripts/deck/extensions/scale/deck.scale.js"></script>
