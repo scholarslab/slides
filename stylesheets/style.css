@@ -1,4 +1,7 @@
 :root {
+--franklin-gothic: franklin-gothic-urw, Arial, sans-serif;
+--adobe-caslon-pro: adobe-caslon-pro, Garamond, serif;
+
 /* Brand Color Palate*/
 --uvalib-main-rotunda-orange: #E57200;
 --uvalib-main-jefferson-blue: #232D4B;
@@ -29,15 +32,19 @@ body {
     color: white;
     color: rgba(255,255,255,0.925);
     background-color: var(--uvalib-main-jefferson-blue);
-    font-family: franklin-gothic-urw, Arial, sans-serif;
+    font-family: var(--franklin-gothic);
     font-weight: 300;
+}
+a,:link {
+  color: white;
+  color: rgba(255,255,255,0.925);
 }
 
 #banner {
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   z-index: 500000;
@@ -47,8 +54,15 @@ body {
 }
 
 #banner span {
-  display:block;
+  display:flex;
   width: 200px;
+  flex-direction:column;
+  flex-wrap: nowrap;
+  font-family: var(--adobe-caslon-pro);
+  line-height:0;
+  align-content:center;
+  margin:0;
+  font-size: 1.75rem;
 }
 
 #banner img {
@@ -62,10 +76,10 @@ body {
     width: 100vw;
     padding: 5rem;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     background-image: linear-gradient(rgba(35,45,75,0.875),rgba(35,45,75,0.875)),
       url('../images/background.jpg');
     background-size: cover;
