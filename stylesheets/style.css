@@ -73,17 +73,19 @@ a,:link {
 
 .slide {
     height: 90vh;
-    width: 100vw;
-    padding: 5rem;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items:flex-start;
+    padding-top: 10vh;
+    padding: 3rem;
     background-image: linear-gradient(rgba(35,45,75,0.875),rgba(35,45,75,0.875)),
       url('../images/background.jpg');
     background-size: cover;
     background-attachment: fixed;
+}
+.slide > div {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items:center;
 }
 
 .slide h1 {
@@ -95,7 +97,7 @@ a,:link {
 .slide p,
 .slide ul,
 .slide ol {
-  font-size: clamp(1rem, 1vw + 1.5rem, 3rem);
+  font-size: clamp(1rem, 1vw + 1.25rem, 2.5rem);
 
 }
 
@@ -108,6 +110,16 @@ section#praxis-poster-3 {
 section#expertise {
   background-image: linear-gradient(rgba(35,45,75,0.875),rgba(35,45,75,0.875)),
   url('../images/map-charlottesville.jpg');
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-content: flex-start;
+  width: 100vw !important;
+}
+
+section#expertise .content {
+  display:flex;
+  justify-content: space-between;
 }
 
 /* Deck.js Styles */
