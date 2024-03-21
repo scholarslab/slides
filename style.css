@@ -1,6 +1,7 @@
 :root {
 --franklin-gothic: franklin-gothic-urw, Arial, sans-serif;
 --adobe-caslon-pro: adobe-caslon-pro, Garamond, serif;
+--bodoni-urw: bodoni-urw, serif;
 
 /* Brand Color Palate*/
 --uvalib-main-rotunda-orange: #E57200;
@@ -9,7 +10,7 @@
 --uvalib-main-black: #000000;
 
 /*Secondary Brand Colors*/
---uvalib-secondary-web-orange: #EB5F0C;
+--uvalib-secondary-web-orange: rgb(235, 95, 12);
 --uvalib-secondary-web-blue: #141E3C;
 --uvalib-secondary-light-gray: #F1F1F1;
 --uvalib-secondary-medium-gray: #DADADA;
@@ -28,6 +29,10 @@
     box-sizing: border-box;
 }
 
+html {
+
+}
+
 body {
     color: white;
     color: rgba(255,255,255,0.925);
@@ -35,6 +40,13 @@ body {
     font-family: var(--franklin-gothic);
     font-weight: 300;
 }
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 a,:link {
   color: white;
   color: rgba(255,255,255,0.925);
@@ -58,10 +70,11 @@ a,:link {
   width: 200px;
   flex-direction:column;
   flex-wrap: nowrap;
-  font-family: var(--adobe-caslon-pro);
+  font-family: var(--franklin-gothic);
   line-height:0;
   align-content:center;
   margin:0;
+  font-weight:700;
   font-size: 1.75rem;
 }
 
@@ -74,7 +87,7 @@ a,:link {
 .slide {
     height: 90vh;
     padding-top: 10vh;
-    padding: 3rem;
+    padding: 5rem;
     background-image: linear-gradient(rgba(35,45,75,0.875),rgba(35,45,75,0.875)),
       url('../images/background.jpg');
     background-size: cover;
@@ -84,23 +97,81 @@ a,:link {
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    justify-items:center;
+    align-content:center;
+    height: 100%;
 }
 
 .slide h1 {
   font-size: clamp(4rem, 6vw + 1.5rem, 6rem);
   margin:0;
   font-weight: 700;
+  color: var(--uvalib-main-rotunda-orange);
 }
 
+.slide h2 {
+  font-size: clamp(1.5rem, 2vw + 1.5rem, 3rem);
+  margin:0;
+  font-weight: 100;
+
+  color: var(--uvalib-main-rotunda-orange);
+}
 .slide p,
-.slide ul,
-.slide ol {
+.slide li {
   font-size: clamp(1rem, 1vw + 1.25rem, 2.5rem);
 
 }
 
+.gallery {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:stretch;
+  row-gap: 3vw;
+}
+
+.gallery li {
+  width: 15vw;
+  font-size: 1rem;
+}
+.gallery .name {
+  font-weight: 400;
+}
+
+.gallery .position {
+  font-size:.75rem;
+}
+
+/* Specifid Slide Decks */
+body#about-us {
+  background-color:white !important;
+  color: #333;
+}
+
+body#about-us .slide {
+  background-image:none !important;
+  background-color:white !important;
+  color: #333;
+}
+
+body#about-us #banner span {
+  font-weight:400;
+  color: var(--uvalib-secondary-web-orange);
+}
+
+body#about-us a,
+body#about-us a:link,
+body#about-us a:visited {
+  color: var(--uvalib-secondary-cyan);
+}
+
+body#about-us a:hover,
+body#about-us a:active {
+  color: var(--uvalib-secondary-web-blue);
+
+}
 /* Specific Slide Styles */
 section#praxis-poster-3 {
   background-image: linear-gradient(rgba(35,45,75,0.875),rgba(35,45,75,0.875)),
@@ -120,6 +191,65 @@ section#expertise {
 section#expertise .content {
   display:flex;
   justify-content: space-between;
+}
+
+section#graduate-fellowships > div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+section#graduate-fellowships h1 {
+  width: 100%;
+  margin-bottom: 40px;
+}
+section#graduate-fellowships .summary {
+  flex: 1;
+}
+
+body.makerspace,
+body.research-and-development,
+body.spatial-tech {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-position: bottom left;
+}
+
+body.makerspace {
+  background-image: url("images/makerspace2.jpg");
+}
+
+body.research-and-development {
+  background-image: url("images/buysse.png");
+}
+
+body.spatial-tech {
+  background-image: url("images/map-charlottesville.jpg");
+  background-position: top right;
+}
+
+body.makerspace #banner,
+body.spatial-tech #banner,
+body.research-and-development #banner {
+  display:none;
+}
+
+body.makerspace .slide,
+body.spatial-tech .slide,
+body.research-and-development .slide {
+  width: 50vw;
+  float: right;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  padding:5rem;
+  background: none !important;
+  box-shadow: 10px 10px rgba(0,0,0,0.25);
+}
+
+body.spatial-tech .slide {
+  float:left;
+  margin: 2rem 0 0 2rem;
 }
 
 /* Deck.js Styles */
