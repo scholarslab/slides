@@ -133,7 +133,7 @@ a,:link {
 }
 
 .gallery li {
-  width: 15vw;
+  width: 14vw;
   font-size: 1rem;
 }
 .gallery .name {
@@ -250,6 +250,21 @@ body.research-and-development .slide {
 body.spatial-tech .slide {
   float:left;
   margin: 2rem 0 0 2rem;
+}
+
+section#our-teaching-philosophy > div {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+}
+section#our-teaching-philosophy a {
+  display:block;
+  width: 50%;
+}
+
+section#our-teaching-philosophy img {
+width: 1000px;
 }
 
 /* Deck.js Styles */
