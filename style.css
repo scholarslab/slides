@@ -9,6 +9,7 @@
 --uvalib-main-white: #FFFFFF;
 --uvalib-main-black: #000000;
 
+
 /*Secondary Brand Colors*/
 --uvalib-secondary-web-orange: rgb(235, 95, 12);
 --uvalib-secondary-web-blue: #141E3C;
@@ -23,6 +24,23 @@
 --uvalib-secondary-teal: #25CAD3;
 --uvalib-secondary-magenta: #EF3F6B;
 --uvalib-secondary-green: #008000; /*ADA compliant*/
+
+	/*Custom SLab Colors*/
+	--blue-alt-dark:#005679;
+	--blue-alt:#007BAC;
+	--blue-alt-light:#55C4EC;
+	--blue-alt-lighter:#91D8F2;
+	--blue-alt-lightest:#BFE7F7;
+	--teal-darker:#16777C;
+	--teal-dark:#1DA1A8;
+	--teal:#25CAD3;
+	--teal-light:#5BD7DE;
+	--teal-lightest:#C8F2F4;
+	--grape:rgb(111, 45, 189);
+	--pale-aqua:rgb(184, 208, 235);
+	--diamond: rgb(185, 250, 248);
+	--darkpastelpurple: rgb(154, 119, 210);
+	--medskyblue:rgb(117, 227, 239);
 }
 
 * {
@@ -34,11 +52,10 @@ html {
 }
 
 body {
-    color: white;
-    color: rgba(255,255,255,0.925);
-    background-color: var(--uvalib-main-jefferson-blue);
+
     font-family: var(--franklin-gothic);
     font-weight: 300;
+    background-color: #f9f9f9;
 }
 
 img {
@@ -48,8 +65,6 @@ img {
 }
 
 a,:link {
-  color: white;
-  color: rgba(255,255,255,0.925);
 }
 
 #banner {
@@ -61,8 +76,9 @@ a,:link {
   width: 100vw;
   z-index: 500000;
   padding: 0.5rem 3rem;
-  height: 10vh;
+  height: 8vh;
   border-bottom: 1px solid rgba(0,0,0,0.125);
+  background: white;
 }
 
 #banner span {
@@ -84,9 +100,14 @@ a,:link {
   width: auto;
 }
 
+#slab-logo {
+  display:block;
+  text-decoration:none;
+  width:300px
+}
+
 .slide {
     height: 90vh;
-    background: orange;
 }
 .slide > div {
     display:flex;
@@ -105,14 +126,28 @@ a,:link {
 }
 
 .slide h2 {
-  font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
   margin:0;
   font-weight: 700;
-  color: var(--uvalib-main-rotunda-orange);
+  color: var(--blue-alt-dark);
 }
 .slide p,
 .slide li {
   font-size: clamp(1rem, 1vw + 1.25rem, 2rem);
+}
+
+header.slide > div,
+.slide.feature > div {
+  justify-content: center;
+}
+
+header.slide h1,
+.slide.feature h1 {
+  font-size: clamp(2.5rem, 10vw + 1.5rem, 10rem);
+}
+
+header.slide p {
+  font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
 }
 
 .gallery {
@@ -341,6 +376,27 @@ body.connection {
 body.your-name-here {
   background-image: url("images/your-name-here.png");
 }
+
+/* DH GradCamp Slides */
+#dhgradcamp #genres-and-areas > div {
+  justify-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap:wrap;
+  gap: 1rem;
+}
+
+#dhgradcamp #genres-and-areas > div h1 {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+#dhgradcamp #genres-and-areas > div > div {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+}
+
 
 /* Deck.js Styles */
 html, body {
