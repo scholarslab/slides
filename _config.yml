@@ -5,4 +5,4 @@ exclude: ['readme.md', 'Rakefile', 'Procfile', 'config.rb', '.gitignore', '.sass
 show_drafts: true
 
 title: Scholars' Lab Slides
-domain: http://slides.scholarslab.org
+domain: https://scholarslab.lib.virginia.edu/slides/
