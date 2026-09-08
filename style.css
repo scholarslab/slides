@@ -250,7 +250,7 @@ section#graduate-fellowships .summary {
 
 body.makerspace,
 body.research-and-development,
-body.spatial-tech {
+body.spatial-tech-gis {
   background-size: cover;
   background-attachment: fixed;
   background-repeat:no-repeat;
@@ -265,19 +265,19 @@ body.research-and-development {
   background-image: url("images/buysse.png");
 }
 
-body.spatial-tech {
+body.spatial-tech-gis-gis {
   background-image: url("images/map-charlottesville.jpg");
   background-position: top right;
 }
 
 body.makerspace #banner,
-body.spatial-tech #banner,
+body.spatial-tech-gis #banner,
 body.research-and-development #banner {
   display:none;
 }
 
 body.makerspace .slide,
-body.spatial-tech .slide,
+body.spatial-tech-gis .slide,
 body.research-and-development .slide {
   width: 50vw;
   float: right;
@@ -288,7 +288,7 @@ body.research-and-development .slide {
   box-shadow: 10px 10px rgba(0,0,0,0.25);
 }
 
-body.spatial-tech .slide {
+body.spatial-tech-gis .slide {
   float:left;
   margin: 2rem 0 0 2rem;
 }
