@@ -406,6 +406,38 @@ body.your-name-here {
   padding: 1rem;
 }
 
+/* Upcoming Events */
+#upcoming-events .slide {
+  justify-content: space-between;
+}
+
+#events {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+#events a {
+  color: var(--uvalib-text-almost-black) !important;
+  text-decoration:none;
+}
+
+#events li {
+  border: 1px solid var(--blue-alt-light);
+  padding: 2rem;
+  font-size: clamp(0.8rem, 1vw + 1.25rem, 1.5rem);
+  box-shadow: 10px 10px var(--blue-alt-lightest);
+}
+
+#events li h2 {
+  font-size: clamp(1rem, 1vw + 1.25rem, 2rem);
+}
+
+
+
 
 /* Deck.js Styles */
 html, body {

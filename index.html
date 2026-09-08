@@ -104,6 +104,10 @@ refresh: true
     <a href="https://xkcd.com/1053/"><img src="https://imgs.xkcd.com/comics/ten_thousand.png" alt=""></a>
     </div>
 </section>
+<section class="slide" id="upcoming-events">
+    <h1>Upcoming Events!</h1>
+    <ul id="events"></ul>
+</section>
 <section class="slide" id="makerspace">
     <h1>Makerspace</h1>
     <p>3D modeling and printing, physical computing, electronics, textiles, laser cutting, crafting.</p>
@@ -137,3 +141,83 @@ The Scholars' Lab's international reputation, and external leadership and servic
     <p>Visit <a href="https://scholarslab.org">ScholarsLab.Org</a> or email <a href="mailto:scholarslab@virginia.edu">scholarslab@virginia.edu</a> to set up a time to talk with us about your work and interests!</p>
 </section>
 {% include DH-partners-IATH.html %}
+
+
+<script type="module">
+    import { EventsData } from 'https://unpkg.internal.lib.virginia.edu/web-components/latest/@uvalib/data-wrap/data-wrap.js';
+
+    const eventsData = new EventsData({ calId: '4299', category: '70848,33496', limit: 4 });
+
+    eventsData.fetchData().then(results => {
+    console.log(results);
+    const eventsList = document.getElementById('events');
+
+    results.items.forEach(event => {
+        const eventContainer = document.createElement('li');
+
+        // Create the <h3> element with the event title
+        const eventHeading = document.createElement('h2');
+		const eventLink = document.createElement('a');
+		const eventTimeDiv = document.createElement('div');
+
+		eventLink.href = event.link;
+        eventLink.textContent = event.title;
+
+		const timestampStart = new Date(event.start);
+		const timestampEnd = new Date(event.end);
+
+		const dateStringOptions = {
+			weekday: 'long',
+       		year: 'numeric',
+       		month: 'long',
+       		day: 'numeric'
+		};
+
+		const timeStringOptions = {
+			hour: "numeric",
+			minute: "numeric"
+		};
+
+		var eventStartDateString = timestampStart.toLocaleDateString('en-US', dateStringOptions);
+		var eventEndDateString = timestampEnd.toLocaleDateString('en-US', dateStringOptions);
+		var eventStartTimeString = timestampStart.toLocaleTimeString('en-US', timeStringOptions).replace(' ', '');
+		var eventEndTimeString = timestampEnd.toLocaleTimeString('en-US',timeStringOptions).replace(' ', '');
+
+		// Start putting together the event start/end string.
+		var eventWhenText = eventStartDateString + ', ' + eventStartTimeString;
+
+		if (eventStartDateString == eventEndDateString) {
+			eventWhenText = eventWhenText + '–' + eventEndTimeString;
+		} else {
+			eventWhenText = eventWhenText + '–' + eventEndDateString + ', ' + eventEndTimeString;
+		}
+
+		eventTimeDiv.textContent = eventWhenText;
+
+		eventHeading.appendChild(eventLink);
+		eventContainer.appendChild(eventHeading);
+		eventContainer.appendChild(eventTimeDiv);
+
+		let eventLocationText = [];
+		if (event.location) {
+			eventLocationText.push(event.location);
+		}
+
+		if (event.onlineSeats > 0) {
+			eventLocationText.push('Online');
+		}
+
+		console.log(eventLocationText);
+
+		const eventLocationDiv = document.createElement('div');
+		eventLocationDiv.textContent = eventLocationText.join(' & ');
+
+		eventContainer.appendChild(eventLocationDiv);
+
+        // Append the list item to the events list
+        eventsList.appendChild(eventContainer);
+      });
+    }).catch(error => {
+      console.error('Error fetching events:', error);
+    });
+  </script>
