@@ -154,15 +154,23 @@ header.slide p {
   list-style:none;
   margin:0;
   padding:0;
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items:stretch;
-  row-gap: 3vw;
+  display:grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #DH-partners-IATH .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 }
 
 .gallery li {
-  width: 14vw;
   font-size: 1rem;
 }
 .gallery .name {
