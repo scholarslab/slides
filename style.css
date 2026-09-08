@@ -290,14 +290,15 @@ section#our-teaching-philosophy > div {
     flex-wrap: nowrap;
     align-items: center;
     justify-items: center;
-}
-section#our-teaching-philosophy a {
-  display:block;
-  width: 50%;
+    gap: 2rem;
 }
 
-section#our-teaching-philosophy img {
-width: 1000px;
+section#our-teaching-philosophy > div div {
+    flex: 1;
+}
+
+section#our-teaching-philosophy .image img {
+  width: 1000px;
 }
 
 body.prism,
