@@ -133,7 +133,7 @@ a,:link {
 }
 .slide p,
 .slide li {
-  font-size: clamp(1rem, 1vw + 1.25rem, 2rem);
+  font-size: clamp(1rem, 1vh + 1.25rem, 1.5rem);
 }
 
 header.slide > div,
@@ -147,7 +147,7 @@ header.slide h1,
 }
 
 header.slide p {
-  font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
+  font-size: clamp(1rem, 2vh + 1.5rem, 2rem);
 }
 
 .gallery {
