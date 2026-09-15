@@ -148,13 +148,14 @@ refresh: true
     const eventsData = new EventsData({ calId: '4299', category: '70848,33496', limit: 4 });
 
     eventsData.fetchData().then(results => {
-    console.log(results);
     const eventsList = document.getElementById('events');
 
     results.items.forEach(event => {
         const eventContainer = document.createElement('li');
 
         // Create the <h3> element with the event title
+        const eventInfo = document.createElement('div');
+        const eventQRCode = document.createElement('div');
         const eventHeading = document.createElement('h2');
 		const eventLink = document.createElement('a');
 		const eventTimeDiv = document.createElement('div');
@@ -194,8 +195,8 @@ refresh: true
 		eventTimeDiv.textContent = eventWhenText;
 
 		eventHeading.appendChild(eventLink);
-		eventContainer.appendChild(eventHeading);
-		eventContainer.appendChild(eventTimeDiv);
+		eventInfo.appendChild(eventHeading);
+		eventInfo.appendChild(eventTimeDiv);
 
 		let eventLocationText = [];
 		if (event.location) {
@@ -206,14 +207,17 @@ refresh: true
 			eventLocationText.push('Online');
 		}
 
-		console.log(eventLocationText);
-
 		const eventLocationDiv = document.createElement('div');
 		eventLocationDiv.textContent = eventLocationText.join(' & ');
 
-		eventContainer.appendChild(eventLocationDiv);
+        const qrCodeString = '<lean-qr value="'+event.link+'" class="qr-code"></lean-qr>';
+
+        eventQRCode.insertAdjacentHTML('beforeend', qrCodeString);
+		eventInfo.appendChild(eventLocationDiv);
 
         // Append the list item to the events list
+        eventContainer.appendChild(eventInfo);
+        eventContainer.appendChild(eventQRCode);
         eventsList.appendChild(eventContainer);
       });
     }).catch(error => {

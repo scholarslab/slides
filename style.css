@@ -430,10 +430,19 @@ body.your-name-here {
   padding: 2rem;
   font-size: clamp(0.8rem, 1vw + 1.25rem, 1.5rem);
   box-shadow: 10px 10px var(--blue-alt-lightest);
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  font-size: 1.2rem;
+}
+
+#events li div + div {
+  min-width: 160px;
 }
 
 #events li h2 {
-  font-size: clamp(1rem, 1vw + 1.25rem, 2rem);
+  font-size: clamp(0.75rem, 1vw + 1.25rem, 1.5rem);
+  margin-bottom: 1rem;
 }
 
 
